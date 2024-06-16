@@ -95,11 +95,10 @@ export default function CalendarComponent() {
             <>
               <Text style={{ color: '#ffffff' }}>{item.vendor.vendorName}</Text>
               <Text style={{ color: '#ffffff', marginBottom: 10, fontWeight: 'bold' }}>{item.vendor.phoneNumber}</Text>
-              {item.vendor.streetAddress &&
-                <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                  <MapPinIcon size={15} color="white" />
-                  <Text style={{ color: '#ffffff', marginLeft: 2 }}>{item.vendor.streetAddress}</Text>
-                </View>}
+              <View style={{ flexDirection: 'row', alignItems: 'center', marginTop: 10 }}>
+                <MapPinIcon size={15} color="white" />
+                <Text style={{ color: '#ffffff', marginLeft: 5 }}>{data.customer.street}</Text>
+              </View>
               <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                 <Text style={{ color: '#ffffff' }}>{item.status}</Text>
                 {item.status !== 'Completed' && <Text style={{ color: '#ffffff', marginLeft: 5 }}>{item.arrivalStartWindow} - {item.arrivalEndWindow}</Text>}
